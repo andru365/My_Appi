@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./styleact3.css">
+	<title>actividad 3</title>
+</head>
+<body>
+<!--Formulario para recopilar información-->
+<form method="post">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre"  placeholder="Ingresa tu nombre" required>
+
+    <label for="apellido">apellido:</label>
+    <input type="text" id="apellido"  placeholder="Ingresa tu apellido"  required>
+
+    <label for="apodo">apodo:</label>
+    <input type="text" id="apodo"  placeholder="Ingresa tu apodo"  required>
+
+    <label for="colo de cabello">color de cabello:</label>
+    <input type="text" id="colordecabello"  placeholder="Ingresa tu color de cabello"  required>
+
+    <label for="colo de ojos">color de ojos:</label>
+    <input type="text" id="colordeojos"  placeholder="Ingresa tu color de ojos "  required>
+
+
+    <label for="edad">edad:</label>
+    <input type="text" id="edad"  placeholder="Ingresa tu edad "  required>
+
+    <label for="hobby">hobby:</label>
+    <input type="text" id="hobby"  placeholder="Ingresa tu hobby solo uno"  required>
+<!--Botón para generar el cuento-->
+      <button type="button" id="boton">Enviar</button>
+
+ 
+ <!--Área para mostrar el cuento generado -->
+    <p id="mensaje" class="p-mensaje"></p>
+
+</form>
+
+
+    
+
+<script>
+//Escuchar el evento de clic en el botón "Enviar
+        document.getElementById('boton').addEventListener('click', function(event) {
+            event.preventDefault();
+//Obtener los valores ingresados por el usuario
+            var nombres = document.getElementById('nombre').value;
+            var apodo = document.getElementById('apodo').value;
+            var colordecabello = document.getElementById('colordecabello').value;
+            var colordeojos = document.getElementById('colordeojos').value;
+            var edad = document.getElementById('edad').value;
+            var hobby = document.getElementById('hobby').value;
+           
+
+
+// se Construlle el cuento utilizando los datos ingresados
+            var cuento = `Había una vez una persona llamada ${nombres}, conocida cariñosamente como ${apodo}. Tenía un sueño viajar por todo el mundo haci que para salir e viaje se pinto el cabello de color ${colordecabello} y se puso lentes de contacto en los ojos  de un hermoso tono de ${colordeojos}. A pesar de sus ${edad}  años de edad no sintio miedo de hacer lo que el corazon le decia su pasión en la vida era ${hobby}. Un día, mientras exploraba el mundo, sucedió algo asombroso  encontro la felicidad que tanto le faltaba en otros lugares y con mucha gente nueva `;
+  // Mostrar el cuento en la página
+            document.getElementById('mensaje').textContent = cuento
+
+
+         });
+
+
+          
+       
+       
+     </script>
+
+</body>
+</html>
